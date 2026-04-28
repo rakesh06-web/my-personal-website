@@ -1,0 +1,194 @@
+:root {
+  --bg-color: #0f0f0f;
+  --card-color: #1a1a1a;
+  --primary: #000000;
+  --accent: #ffffff;
+  --text-color: #f5f5f5;
+  --muted: #aaaaaa;
+  --border-color: #222;
+  --hover-color: #222;
+  --radius: 14px;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.subtitle {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+
+/* GRID layout for page */
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* HEADER (Flexbox) */
+.header {
+  background: var(--primary);
+  color: var(--accent);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* MAIN */
+.main {
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+
+/* ===== TOP SONGS SECTION ===== */
+
+.top-songs {
+  margin-bottom: 50px;
+}
+
+.top-songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.song-card {
+  background: var(--card-color);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #222;
+  transition: 0.3s ease;
+}
+
+.song-card:hover {
+  background: var(--hover-color);
+  transform: translateY(-4px);
+}
+
+
+/* GRID for artist cards */
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+
+
+/* CARD STYLE */
+.artist-card {
+  background: var(--card-color);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  padding-bottom: 20px;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-8px);
+  border-color: #333;
+}
+
+
+.artist-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+
+
+.artist-card h3 {
+  margin: 15px 0;
+}
+
+/* Songs hidden initially */
+.songs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+  display: none;
+  text-align: center;
+}
+
+.songs li {
+  padding: 5px 0;
+  color: var(--accent);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--primary);
+  color: var(--accent);
+  text-align: center;
+  padding: 15px;
+}
+.section-text {
+  max-width: 800px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main {
+    padding: 30px 20px;
+  }
+  .about-image {
+    width: 120px;
+  }
+}
+
+
